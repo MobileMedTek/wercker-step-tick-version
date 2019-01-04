@@ -31,6 +31,6 @@ To be able to use this step, you will first need to create a GitHub token with a
 
 # Changelog
 
-## 0.0.1
+## 0.0.2
 
 - Initial Commit

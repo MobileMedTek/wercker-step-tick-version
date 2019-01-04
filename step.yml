@@ -1,5 +1,5 @@
 name: tick-version
-version: 0.0.1
+version: 0.0.2
 summary: Increment your project's patch version for NPM based projects
 keywords:
   - git
