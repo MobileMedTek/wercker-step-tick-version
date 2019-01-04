@@ -1,8 +1,0 @@
-name: tick-version
-version: 0.0.1
-description: Patch your project's current version from a npm package.json file
-keywords:
-  - git
-  - version
-  - npm
-  - patch
