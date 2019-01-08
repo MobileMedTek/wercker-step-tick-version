@@ -1,11 +1,11 @@
 #!/bin/sh
 
 validate_dependencies() {
-    if [[ -x /usr/bin/git ]]; then
+    if [[ -e /usr/bin/git ]]; then
         fail "git not installed"
     fi
 
-    if [[ -x /usr/bin/npm ]]; then
+    if [[ -e /usr/bin/npm ]]; then
         fail "npm not installed"
     fi
     if [[ ! -d ".git" ]]; then
