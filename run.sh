@@ -33,7 +33,7 @@ main() {
 
     npm version patch -m 'Version Change'
 
-    git push $git_token
+    git push $git_token HEAD:$WERCKER_GIT_BRANCH
     git push --tags $git_token
 
     success "New version applied with git tag"
