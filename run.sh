@@ -27,11 +27,21 @@ main() {
     local git_token="https://$WERCKER_TICK_VERSION_TOKEN@github.com/$WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSITORY.git";
 
     npm config set git-tag-version true
+    echo "set Git tag version config to true"
 
     git config --global user.email "builds@test.com"
     git config --global user.name "Build Pipeline"
 
+    echo "set git config to builds@test.com and Build Pipeline"
+
     npm version patch -m 'Version Change'
+
+    echo "Changed version in package.json"
+
+    git add package-lock.json
+    git commit -m "Version Change"
+
+    echo "Committed change to package-lock.json"
 
     git push $git_token HEAD:$WERCKER_GIT_BRANCH
     git push --tags $git_token
