@@ -31,6 +31,10 @@ To be able to use this step, you will first need to create a GitHub token with a
 
 # Changelog
 
+## 0.0.3
+
+- Fixed bash condition bug
+
 ## 0.0.2
 
 - Initial Commit

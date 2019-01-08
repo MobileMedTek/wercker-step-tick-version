@@ -1,20 +1,20 @@
 #!/bin/sh
 
 validate_dependencies() {
-    if [ -x /usr/bin/git ]; then
+    if [[ -x /usr/bin/git ]]; then
         fail "git not installed"
     fi
 
-    if [ -x /usr/bin/npm ]; then
+    if [[ -x /usr/bin/npm ]]; then
         fail "npm not installed"
     fi
-    if [ ! -d ".git" ]; then
+    if [[ ! -d ".git" ]]; then
         fail "No git repository found"
     fi
 }
 
 validate_token(){
-    if [ -z $WERCKER_TICK_VERSION_TOKEN ]; then
+    if [[ -z $WERCKER_TICK_VERSION_TOKEN ]]; then
         fail "No git token supplied"
     fi
 }
