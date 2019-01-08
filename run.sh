@@ -1,24 +1,24 @@
 #!/bin/sh
 
 validate_dependencies() {
-    if [[ -e /usr/bin/git ]]; then
-        fail "git not installed"
+    if [ ! -e /usr/bin/git ]; then
+        echo "git not installed"
     fi
 
-    if [[ -e /usr/bin/npm ]]; then
-        fail "npm not installed"
+    if [ ! -e /usr/bin/npm ]; then
+        echo "npm not installed"
     fi
-    if [[ ! -d ".git" ]]; then
-        fail "No git repository found"
+
+    if [ ! -d ".git" ]; then
+        echo "No git repository found"
     fi
 }
 
 validate_token(){
-    if [[ -z $WERCKER_TICK_VERSION_TOKEN ]]; then
+    if [ -z $WERCKER_TICK_VERSION_TOKEN ]; then
         fail "No git token supplied"
     fi
 }
-
 
 main() {
     validate_dependencies;
